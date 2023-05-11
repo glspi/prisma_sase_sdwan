@@ -696,7 +696,7 @@ class API(object):
                                          read=read,
                                          redirect=redirect,
                                          status=status,
-                                         method_whitelist=method_whitelist,
+                                         allowed_methods=method_whitelist,
                                          status_forcelist=status_forcelist,
                                          backoff_factor=backoff_factor,
                                          raise_on_redirect=raise_on_redirect,
