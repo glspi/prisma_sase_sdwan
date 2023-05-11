@@ -648,7 +648,7 @@ class API(object):
         return
 
     def modify_rest_retry(self, total=8, connect=None, read=None, redirect=None, status=None,
-                          method_whitelist=urllib3.util.retry.Retry.DEFAULT_METHOD_WHITELIST, status_forcelist=None,
+                          method_whitelist=urllib3.util.retry.Retry.DEFAULT_ALLOWED_METHODS, status_forcelist=None,
                           backoff_factor=0.705883, raise_on_redirect=True, raise_on_status=True,
                           respect_retry_after_header=True, adapter_url="https://"):
         """
