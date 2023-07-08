@@ -1711,7 +1711,11 @@ class API(object):
         """
         :returns expires_in
         """
-        return int(round((self.jwt_expires_at - datetime.datetime.now()).total_seconds()))
+        try:
+            return int(round((self.jwt_expires_at - datetime.datetime.now()).total_seconds()))
+        except AttributeError:
+            print("\nError logging in to Prisma with provided API credentials.")
+            sys.exit()
 
     def _generate_jwt(self):
 
